@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%
+% This CV is created using altacv.cls (v1.1.4, 27 July 2018)
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% Then compile with XeLaTeX or LuaLaTeX.
+%% to the \documentclass options.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[12pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=7.0cm,marginparsep=1.0cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+\setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\usepackage[hidelinks]{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  pdftitle={},
+  pdfauthor={},
+  pdfsubject={},
+  pdfkeywords={},
+  colorlinks=false
+}
+
+\usepackage{multicol}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%\addbibresource{sample.bib}
+
+\begin{document}
+\name{Nathan Esau}
+\tagline{Software Developer in Toronto Area}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+\photo{2.5cm}{profile_photo}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{nathanesau1@gmail.com}
+  \phone{778-323-5310}
+  \mailaddress{27 Green Bush Road, M2M 1P2}
+  \location{Toronto, ON}
+  \homepage{\href{https://nathanesau.github.io}{nathanesau.github.io}}
+  %\github{\href{https://github.com/nathanesau}{github.com/nathanesau}}
+  \linkedin{\href{https://linkedin.com/in/nathanesau}{linkedin.com/in/nathanesau}}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Software Developer \hspace{2mm} \cvtag{C++} \cvtag{.NET}}{Moody's Analytics}{June 2017 -- Present}{Toronto, ON}
+\begin{itemize}
+\item Helped maintain AXIS, a widely used insurance software
+\item Collaborated with 100+ programmers using version control, adding requested features, re-structuring code, regression testing, fixing bugs
+\item Designed algorithms for numerical integration, stochastic simulations and valuing financial securities
+\item Added new graphical user interface elements using .NET framework and wrote database code for the application
+\end{itemize}
+
+\divider
+
+\cvevent{Software Developer Intern \hspace{2mm} \cvtag{C++} \cvtag{.NET}}{Moody's Analytics}{Jan 2016 - Aug 2016}{Toronto, ON}
+
+\divider
+
+\cvevent{Research Intern \hspace{2mm} \cvtag{R} \cvtag{Python}}{Simon Fraser University}{May 2015 - Aug 2015}{Burnaby, BC}
+\begin{itemize}
+\item Researched and evaluated various pension plan designs
+\item Programmed an \href{https://github.com/nathanesau/StocVal}{economic scenario generator} using a VAR(1) time series model
+\item Ported Excel Macros into ``R`` programming language
+\end{itemize}
+
+\divider
+
+\cvevent{Statistics Intern \hspace{2mm} \cvtag{SAS} \cvtag{SQL}}{Statistics Canada}{Jan 2015 - Apr 2015}{Ottawa, ON}
+
+\cvsection[]{Projects}
+
+\nocite{*}
+
+%\cvsubsection{\printinfo{\faChrome}{Web Projects}}
+%
+%\cvevent{North America Real Estate Stats \hspace{2mm} \cvtag{JS} \cvtag{AWS} \cvtag{Python}}{\href{https://github.com/nathanesau/narealestatestats}{github.com/nathanesau/narealestatestats}}{}{}
+%
+%\begin{itemize}
+%\item Frontend done using nodeJs: ``recharts`` for visualization
+%\item Backend done using Django
+%\item Some other info abotu this project
+%\end{itemize}
+%
+%\divider
+
+%\cvsubsection{\printinfo{\faDatabase}{Data Science Projects}}
+
+\cvevent{\printinfo{\faTrophy}{Machine Learning Competition \hspace{2mm} \cvtag{R}}}{Simon Fraser University}{Jul 2015}{Burnaby, BC}
+
+\begin{itemize}
+\item Applied \href{https://github.com/nathanesau/ukencompetition}{machine learning methods} (random forest, gradient boosting) to predict revenue earned in mobile app
+\item Prepared \href{https://raw.githubusercontent.com/nathanesau/ukencompetition/master/Poster/poster.pdf}{poster} summarizing analysis and key dataset features
+\end{itemize}
+
+\end{document}
